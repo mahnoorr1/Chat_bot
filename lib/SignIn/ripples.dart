@@ -56,6 +56,21 @@ class _RipplesAnimationState extends State<RipplesAnimation>
     super.dispose();
   }
 
+  TextFormField field1 = TextFormField(
+    decoration: const InputDecoration(
+      labelText: 'username/ email',
+    ),
+  );
+
+  TextFormField field2 = TextFormField(
+    obscureText: true,
+    enableSuggestions: false,
+    autocorrect: false,
+    decoration: const InputDecoration(
+      labelText: 'Password',
+    ),
+  );
+
   Widget _button() {
     return Center(
       child: ClipRRect(
@@ -85,6 +100,34 @@ class _RipplesAnimationState extends State<RipplesAnimation>
           ),
         ),
       ),
+    );
+  }
+
+  showAlertDialog(BuildContext context) {
+
+    // set up the button
+    Widget okButton = TextButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.pop(context);
+      },
+    );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("Error Message!"),
+      content: Text("Please enter all credentials"),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
     );
   }
 
@@ -131,29 +174,19 @@ class _RipplesAnimationState extends State<RipplesAnimation>
                         SizedBox(
                           height: 10,
                         ),
-                        TextFormField(
-                          decoration: const InputDecoration(
-                            labelText: 'username/ email',
-                          ),
-                        ),
-                        Text(
-                          "Password",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        TextFormField(
-                          obscureText: true,
-                          decoration: const InputDecoration(
-                            labelText: 'Password',
-                          ),
-                        ),
+                       field1,
+                        field2,
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(primary: Colors.purple),
                             onPressed: () {
-
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage()));
+                              // if(!field1.toString().isEmpty || !field1.toString().isEmpty){
+                              //   showAlertDialog(context);
+                              // }
+                              // else {
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MyHomePage()));
+                              //}
                              // Navigator.push(context, builder: MyHomePage());
                             },
                             child: Text("SignIn", style: TextStyle(fontSize: 18,

@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> pages = [
     homeScreen(),
     chat(),
-    profile(),
+    owner(),
   ];
   @override
   Widget build(BuildContext context) {
