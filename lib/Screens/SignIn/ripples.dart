@@ -169,7 +169,7 @@ class _RipplesAnimationState extends State<RipplesAnimation>
                           height: 10,
                         ),
                         Text(
-                          "User name/ email",
+                          "User name/ Password",
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w700,

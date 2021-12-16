@@ -167,14 +167,17 @@ class _chatState extends State<chat> {
                           : Alignment.topRight),
                       child: GestureDetector(
                         onLongPress: (){
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return Expanded(
-                                child: _showDialogueBox(item),
-                              );
-                            },
-                          );
+                          setState(() {
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Expanded(
+                                  child: _showDialogueBox(item),
+                                );
+                              },
+                            );
+                          });
+
                         },
                         child: Container(
                           decoration: BoxDecoration(
