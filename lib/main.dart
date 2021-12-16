@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:sec_project_chatbot/profile.dart';
+import 'package:sec_project_chatbot/Screens/SignIn/ripples.dart';
+import 'package:sec_project_chatbot/Screens/profile.dart';
 
-import 'chat.dart';
-import 'homeScreen.dart';
-// void main() {
-//   runApp(MyApp());
-// }
+import 'Screens/chat_screen/chat.dart';
+import 'Screens/homeScreen.dart';
+void main() {
+  runApp(ripples());
+}
 //
 // class MyApp extends StatelessWidget {
 //
