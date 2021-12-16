@@ -1,4 +1,60 @@
-
+// import 'package:flutter/material.dart';
+// class profile extends StatefulWidget {
+//   @override
+//   _profileState createState() => _profileState();
+// }
+//
+// class _profileState extends State<profile> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Profiling"),
+//         centerTitle: true,
+//       ),
+//       body: Center(
+//         child: Container(
+//           child: Column(
+//             children: [
+//               SizedBox(height: 30,),
+//               CircleAvatar(
+//                 radius: 100,
+//                 //backgroundColor: Colors.grey,
+//                 backgroundImage: AssetImage("assets/dp.jpg"),
+//               ),
+//               SizedBox(height: 40,),
+//               Text("user name:", style: TextStyle(
+//                 fontSize: 18,
+//                 fontWeight: FontWeight.w500
+//               ),),
+//               TextFormField(
+//                   decoration: const InputDecoration(
+//                     labelText: 'mahnoorhashmi4000@gmail.com',
+//                 ),
+//               ),
+//               //Text("User name: Mahnoor", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),textAlign: TextAlign.left,),
+//               SizedBox(height: 30,),
+//               Text("password:", style: TextStyle(
+//                   fontSize: 18,
+//                   fontWeight: FontWeight.w500
+//               ),),
+//               TextFormField(
+//                 decoration: const InputDecoration(
+//                   labelText: '********',
+//                 ),
+//               ),
+//               Align(child: FlatButton(child: Text("change pass"), onPressed: (){},), alignment: Alignment.centerRight),
+//
+//               //Text("Password: *******", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),textAlign: TextAlign.left),
+//             ],
+//           )
+//         ),
+//       ),
+//     );
+//   }
+// }
+// import 'package:chat_app/authentication/Registration.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:sec_project_chatbot/Screens/SignIn/ripples.dart';
 class Profile_data {
@@ -67,7 +123,11 @@ class _ownerState extends State<owner> {
                             padding: EdgeInsets.all(5),
                             shape: CircleBorder(),
                           ))
-                   
+                      // FloatingActionButton(
+
+                      //   mini: true,
+                      //   onPressed: (){},
+                      //   child: Icon(Icons.edit), )
                     ],
                   ),
                   SizedBox(
