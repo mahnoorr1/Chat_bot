@@ -1,6 +1,10 @@
 # ChatBot
 ## Semester Project
 An AI chatbot designed for the purpose of a bot therapist project.
+
+## Language used
+- completely based on Flutter/ Dart
+## Description
 - The Project has a omplete basic UI designed 
 - Firebase module initialized
 
